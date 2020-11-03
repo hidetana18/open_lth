@@ -121,8 +121,8 @@ def standard_callbacks(training_hparams: hparams.TrainingHparams, train_set_load
 
     # Basic checkpointing and state saving at the beginning and end.
     result = [
-        run_at_step(start, save_model),
-        run_at_step(end, save_model),
+        #run_at_step(start, save_model),
+        #run_at_step(end, save_model),
         run_at_step(end, save_logger),
         run_every_epoch(checkpointing.save_checkpoint_callback),
     ]
